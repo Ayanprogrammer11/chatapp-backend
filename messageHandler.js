@@ -1,4 +1,4 @@
-function handleMessage(user, wss, ws, message) {
+function handleMessage(users, user, wss, ws, message) {
   try {
     const parsedMessage = JSON.parse(message);
 
@@ -21,6 +21,7 @@ function handleMessage(user, wss, ws, message) {
           JSON.stringify({
             type: "clientNum",
             text: wss.clients.size,
+            users,
           })
         )
       );
