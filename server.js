@@ -1,6 +1,6 @@
 const { initializeWebSocketServer } = require("./websocketManager");
 
-const PORT = 3000;
+const PORT = process.env.PORT;
 initializeWebSocketServer(PORT);
 
 // const WebSocket = require("ws");
